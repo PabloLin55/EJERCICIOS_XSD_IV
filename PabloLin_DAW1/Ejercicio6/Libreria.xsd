@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!-- 
+Nombre: Pablo Lin 
+Curso: 1DAW
+Fecha: 19/04/25
+Ejercicio: Ejercicio6
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> 
+
+    <xs:simpleType name="plantillaTelefono">
+        <xs:restriction base="xs:integer">
+            <xs:totalDigits value="9"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="libreria"> 
+        <xs:complexType> 
+            <xs:sequence> 
+                <xs:element name="codigo" minOccurs="1" maxOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="1000"/>
+                            <xs:maxInclusive value="9999"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="direccion" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="telefono" type="plantillaTelefono" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="propietario" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="telefono" type="plantillaTelefono" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="libro" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="autor" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="formato" minOccurs="0" maxOccurs="1">
+                                <xs:simpleType>
+                                    <xs:restriction>
+                                        <xs:enumeration value="rústica"/>
+                                        <xs:enumeration value="tapa blanda"/>
+                                        <xs:enumeration value="tapa dura"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="publicacion" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="precio" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence> 
+        </xs:complexType> 
+    </xs:element> 
+</xs:schema> 

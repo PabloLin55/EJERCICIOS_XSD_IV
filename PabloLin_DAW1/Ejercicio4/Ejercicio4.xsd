@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!-- 
+Nombre: Pablo Lin 
+Curso: 1DAW
+Fecha: 19/04/25
+Ejercicio: Ejercicio4
+-->
+<heladeria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xsi:noNamespaceSchemaLocation="heladeria.xsd"> 
+    <helado> 
+        <fresa /> 
+        <chocolate /> 
+    </helado> 
+    <helado> 
+        <vainilla /> 
+        <chocolate /> 
+    </helado> 
+</heladeria> 

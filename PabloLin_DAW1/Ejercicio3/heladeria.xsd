@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Nombre: Pablo Lin 
+Curso: 1DAW
+Fecha: 19/04/25
+Ejercicio: Ejercicio3
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+    <xs:simpleType name="cantidadGramos">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="1000"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="heladeria">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="helado" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:choice>
+                                <xs:element name="chocolate" type="cantidadGramos"/>
+                                <xs:element name="fresa" type="cantidadGramos"/>
+                            </xs:choice>
+
+                            <xs:choice>
+                                <xs:element name="vainilla" type="cantidadGramos"/>
+                                <xs:element name="turron" type="cantidadGramos"/>
+                                <xs:element name="nata" type="cantidadGramos"/>
+                            </xs:choice>
+                        </xs:sequence>
+                        <xs:attribute name="fabricacion" type="xs:date"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

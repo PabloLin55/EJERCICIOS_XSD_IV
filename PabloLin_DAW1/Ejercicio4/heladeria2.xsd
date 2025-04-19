@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Nombre: Pablo Lin 
+Curso: 1DAW
+Fecha: 19/04/25
+Ejercicio: Ejercicio4
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+    <xs:simpleType name="vacio">
+        <xs:restriction base="xs:string">
+            <xs:length value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="heladeria">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="helado" maxOccurs="unbounded">
+                    <xs:complexType>
+                            <xs:choice>
+                                <xs:sequence>
+                                    <xs:element name="fresa" type="vacio"/>
+                                    <xs:element name="chocolate" type="vacio"/>
+                                </xs:sequence>
+
+                                <xs:sequence>
+                                    <xs:element name="vainilla" type="vacio"/>
+                                    <xs:element name="chocolate" type="vacio"/>
+                                </xs:sequence>
+                            </xs:choice>
+                        <xs:attribute name="fabricacion" type="xs:date"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
