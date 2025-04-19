@@ -6,7 +6,7 @@ Fecha: 19/04/25
 Ejercicio: Ejercicio4
 -->
 <heladeria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-xsi:noNamespaceSchemaLocation="heladeria.xsd"> 
+xsi:noNamespaceSchemaLocation="heladeria2.xsd"> 
     <helado> 
         <fresa /> 
         <chocolate /> 

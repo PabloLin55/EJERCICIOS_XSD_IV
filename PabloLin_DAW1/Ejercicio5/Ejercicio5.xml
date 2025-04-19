@@ -5,9 +5,8 @@ Curso: 1DAW
 Fecha: 19/04/25
 Ejercicio: Ejercicio5
 -->
-<heladeria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-xsi:noNamespaceSchemaLocation="Faq.xsd"> 
-<faq> 
+<faq xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xsi:noNamespaceSchemaLocation="Faq.xsd"> 
     <info> 
         <titulo>WINDOWS98? SOLO SI ME OBLIGAN!</titulo> 
         <autor>Fernando Damián Lorenzo García</autor> 

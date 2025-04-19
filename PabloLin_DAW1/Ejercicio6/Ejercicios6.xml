@@ -5,9 +5,8 @@ Curso: 1DAW
 Fecha: 19/04/25
 Ejercicio: Ejercicio6
 -->
-<heladeria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+<libreria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
 xsi:noNamespaceSchemaLocation="Libreria.xsd"> 
-<libreria> 
     <codigo>1263</codigo> 
     <direccion>Juan de Juni, 31</direccion> 
     <telefono>983555555</telefono> 
